@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --logo-font: "norsebold";
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--system-ui);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    /* font: inherit; */
+    display: block;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+
+.image-sidebar {
+    position: relative;
+    background-image: url(img/leaves.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65%;
+}
+
+.logo {
+    position: absolute;
+    font-family: var(--logo-font);
+    color: white;
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 100%;
+    top: 8.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+img:first-of-type {
+    height: 5rem;
+}
+
+.image-sidebar > p {
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    bottom: 10px;
+    left: 32.5%;
+}
+
+header {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(245, 245, 245);
+    padding: 100px 0px 50px 50px;
+}
+
+header > p + p {
+    margin-top: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 20px 0px 20px 50px;
+    box-shadow: black 5px 5px;
+}
+
+form > h3:first-of-type {
+    font-weight: bolder;
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-row + .form-row {
+    margin-top: 1.5rem;
+}
+
+label {
+    color: rgb(85, 85, 85);
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+input {
+    width: 17rem;
+    height: 34px;
+    border-radius: 5px;
+    /* border-color: #E5E7EB; */
+}
+
+input[type="password"]:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    box-shadow: rgba(155, 154, 154, 0.3) 4px 4px;
+}
+
+footer {
+    padding: 20px 0px 0px 50px;
+    background-color: rgb(245, 245, 245);
+    flex-grow: 1;
+}
+
+button {
+    color: white;
+    font-weight: bolder;
+    background-color: #596D48;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    font-weight: bolder;
+    color: #596D48;
+    cursor: pointer;
+}
+
